@@ -5,23 +5,32 @@ public class Metodos {
 
     //========== CREAR ARREGLO ==========
     public static int[] crearArreglo(){
-        Random random   = new Random();
+        try{
+            Random random   = new Random();
 
-            // "+2" para escoger valores randoms entre 2 y 20
-        int Largo       = random.nextInt(19) + 2;
-        int[] arreglo   = new int[Largo];
-        return arreglo;
+                // "+2" para escoger valores randoms entre 2 y 20
+            int Largo       = random.nextInt(19) + 2;
+            int[] arreglo   = new int[Largo];
+            return arreglo;
+        } catch (IllegalArgumentException e) {
+            System.err.println(" Hubo un error  : " + e.getMessage());
+            return null;
+        }
     }
 
 
     //========== LLENAR ARREGLO ==========
     public static void llenarArreglo(int[] arreglo){
-        Random random = new Random();
+        try {
+            Random random = new Random();
 
-            // "-1000" para escoger valores randoms entre 1000 y -1000
-        for (int i = 0; i < arreglo.length; i++) {
-            arreglo[i] = random.nextInt(2001) - 1000;
-        };
+                // "-1000" para escoger valores randoms entre 1000 y -1000
+            for (int i = 0; i < arreglo.length; i++) {
+                arreglo[i] = random.nextInt(2001) - 1000;
+            };
+        } catch (NullPointerException e) {
+            System.err.println(" Hubo un error ");
+        }
     }
 
 
@@ -66,7 +75,7 @@ public class Metodos {
     //========== PRODUCTO ADYACENTE ==========
     public static void producto(int primerMayor,int segundoMayor){
         int resultado = primerMayor * segundoMayor;
-        System.out.println(" El numero adyacente del arreglo es : " + resultado);
+        System.out.println("\n El numero adyacente del arreglo es : " + resultado);
     }
 }
 
