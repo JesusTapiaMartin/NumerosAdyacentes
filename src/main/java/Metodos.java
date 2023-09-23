@@ -55,10 +55,8 @@ public class Metodos {
             if (arreglo[i] > mayor) {
                 segundoMayor = mayor;
                 mayor = arreglo[i];
-
             } else if (arreglo[i] > segundoMayor) {
                 segundoMayor = arreglo[i];
-
             }
         }
         return segundoMayor;
