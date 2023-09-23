@@ -51,6 +51,7 @@ public class Metodos {
                 primerMayor     = arreglo[i];
             }
         }
+        System.out.println("\n      El número más grande es : " + primerMayor);
         return primerMayor;
     }
 
@@ -68,14 +69,19 @@ public class Metodos {
                 segundoMayor = arreglo[i];
             }
         }
+        System.out.println("      El segundo número más grande es : " + segundoMayor);
         return segundoMayor;
     }
 
 
     //========== PRODUCTO ADYACENTE ==========
     public static void producto(int primerMayor,int segundoMayor){
-        int resultado = primerMayor * segundoMayor;
-        System.out.println("\n El numero adyacente del arreglo es : " + resultado);
+        try{
+            int resultado = primerMayor * segundoMayor;
+            System.out.println("\n NÚMERO ADYACENTE : " + resultado);
+        } catch (ArithmeticException e) {
+            System.err.println(" Error al dividir por cero... ");
+        }
     }
 }
 

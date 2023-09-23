@@ -3,6 +3,7 @@ public class ProductoAdyacente {
 
     //========== MAIN ==========
     public static void main(String[] args) {
+        productoAdyacentes();
         pruebaMetodo();
     }
 
@@ -10,6 +11,7 @@ public class ProductoAdyacente {
     //========== PRODUCTO ADYACENTES ==========
     public static void productoAdyacentes() {
         try {
+            System.out.println(" ---------- CASOS ALEATORIOS ---------- ");
             int[] arreglo       = Metodos.crearArreglo();
             Metodos.llenarArreglo(arreglo);
             Metodos.mostrar(arreglo);
@@ -24,6 +26,7 @@ public class ProductoAdyacente {
 
     //========= PROBAR METODO ==========
     public static void pruebaMetodo () {
+        System.out.println("\n ---------- CASO PRUEBA ---------- ");
         int[] arreglo           = {1, -4, 2, 2, 5, -1};
         Metodos.mostrar(arreglo);
         int primerMayor         = Metodos.primerMayor(arreglo);
