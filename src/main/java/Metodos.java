@@ -29,7 +29,7 @@ public class Metodos {
                 arreglo[i] = random.nextInt(2001) - 1000;
             };
         } catch (NullPointerException e) {
-            System.err.println(" Hubo un error ");
+            System.err.println(" Hubo un error... ");
         }
     }
 
