@@ -3,13 +3,6 @@ import java.util.Random;
 
 public class Metodos {
 
-
-    //========== MAIN ==========
-    public static void main(String[] args) {
-
-    }
-
-
     //========== CREAR ARREGLO ==========
     public static int[] crearArreglo(){
         Random random   = new Random();
@@ -38,8 +31,44 @@ public class Metodos {
             System.out.print(arreglo[i] + ",");
         }
     }
+
+
+    //========== PRIMER MAYOR ==========
+    public static int primerMayor(int[] arreglo){
+        int primerMayor         = arreglo[0];
+
+        for (int i = 0; i < arreglo.length ; i++) {
+            if (arreglo[i] > primerMayor){
+                primerMayor     = arreglo[i];
+            }
+        }
+        return primerMayor;
+    }
+
+
+    //========= SEGUNDO MAYOR =========
+    public static int segundoMayor(int[] arreglo){
+        int mayor           = arreglo[0];
+        int segundoMayor    = Integer.MIN_VALUE;
+
+        for (int i = 1; i < arreglo.length; i++) {
+            if (arreglo[i] > mayor) {
+                segundoMayor = mayor;
+                mayor = arreglo[i];
+
+            } else if (arreglo[i] > segundoMayor) {
+                segundoMayor = arreglo[i];
+
+            }
+        }
+        return segundoMayor;
+    }
+
+
+    //========== PRODUCTO ADYACENTE ==========
+    public static void producto(int primerMayor,int segundoMayor){
+        int resultado = primerMayor * segundoMayor;
+        System.out.println(" El numero adyacente del arreglo es : " + resultado);
+    }
 }
-// integer min value
-//        int[] arreglo = crearArreglo();
-//        llenarArreglo(arreglo);
-//        mostrar(arreglo);
+
